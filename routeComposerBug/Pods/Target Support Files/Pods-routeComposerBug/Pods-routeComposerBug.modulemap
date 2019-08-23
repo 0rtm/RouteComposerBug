@@ -1,0 +1,6 @@
+framework module Pods_routeComposerBug {
+  umbrella header "Pods-routeComposerBug-umbrella.h"
+
+  export *
+  module * { export * }
+}
