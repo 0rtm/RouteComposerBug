@@ -57,7 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                try? Navigation.router.navigate(to: Path.red, with: NavigationContext(account: account), animated: true, completion: nil)
 
             return true
-fdsafadsf asdf
         default:
             return false
         }
