@@ -26,3 +26,11 @@ extension TabbarViewController: ContextChecking {
         return self.context == context
     }
 }
+
+extension TabbarViewController: ContextAccepting {
+
+    func setup(with context: NavigationContext?) throws {
+        self.context = context
+    }
+
+}

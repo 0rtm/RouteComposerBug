@@ -26,6 +26,8 @@
 		ACA27F6C23106A8C00365EDB /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6723106A8C00365EDB /* TabBarFactory.swift */; };
 		ACA27F6D23106A8C00365EDB /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6823106A8C00365EDB /* Navigation.swift */; };
 		ACA27F6E23106A8C00365EDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6923106A8C00365EDB /* ViewController.swift */; };
+		ACCF9C60231467E200CA7ECE /* ModalVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9C5E231467E200CA7ECE /* ModalVCViewController.xib */; };
+		ACCF9C61231467E200CA7ECE /* ModalVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9C5F231467E200CA7ECE /* ModalVCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		ACA27F6723106A8C00365EDB /* TabBarFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
 		ACA27F6823106A8C00365EDB /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		ACA27F6923106A8C00365EDB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACCF9C5E231467E200CA7ECE /* ModalVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalVCViewController.xib; sourceTree = "<group>"; };
+		ACCF9C5F231467E200CA7ECE /* ModalVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalVCViewController.swift; sourceTree = "<group>"; };
 		AD71B1775D64BC30D630893B /* Pods-routeComposerBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-routeComposerBug.release.xcconfig"; path = "Target Support Files/Pods-routeComposerBug/Pods-routeComposerBug.release.xcconfig"; sourceTree = "<group>"; };
 		BE26C664E2ABE5038D692FDD /* Pods-routeComposerBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-routeComposerBug.debug.xcconfig"; path = "Target Support Files/Pods-routeComposerBug/Pods-routeComposerBug.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,12 +128,14 @@
 		ACA27F54231069E700365EDB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ACA27F55231069E700365EDB /* AccountSelectorViewController.xib */,
+				ACCF9C5E231467E200CA7ECE /* ModalVCViewController.xib */,
+				ACCF9C5F231467E200CA7ECE /* ModalVCViewController.swift */,
 				ACA27F56231069E700365EDB /* GreenViewController.xib */,
+				ACA27F5A231069E700365EDB /* GreenViewController.swift */,
 				ACA27F57231069E700365EDB /* AccountSelectorViewController.swift */,
+				ACA27F55231069E700365EDB /* AccountSelectorViewController.xib */,
 				ACA27F58231069E700365EDB /* RedViewController.swift */,
 				ACA27F59231069E700365EDB /* RedViewController.xib */,
-				ACA27F5A231069E700365EDB /* GreenViewController.swift */,
 				ACA27F5B231069E700365EDB /* TabBarViewController.swift */,
 			);
 			name = ViewControllers;
@@ -198,6 +204,7 @@
 			files = (
 				ACA27F60231069E800365EDB /* RedViewController.xib in Resources */,
 				AC1261362310686100089842 /* LaunchScreen.storyboard in Resources */,
+				ACCF9C60231467E200CA7ECE /* ModalVCViewController.xib in Resources */,
 				ACA27F5D231069E800365EDB /* GreenViewController.xib in Resources */,
 				ACA27F5C231069E800365EDB /* AccountSelectorViewController.xib in Resources */,
 				AC1261332310686100089842 /* Assets.xcassets in Resources */,
@@ -257,6 +264,7 @@
 				ACA27F5F231069E800365EDB /* RedViewController.swift in Sources */,
 				ACA27F6423106A8300365EDB /* Path.swift in Sources */,
 				ACA27F6A23106A8C00365EDB /* Path.swift in Sources */,
+				ACCF9C61231467E200CA7ECE /* ModalVCViewController.swift in Sources */,
 				ACA27F6D23106A8C00365EDB /* Navigation.swift in Sources */,
 				AC12612E2310686000089842 /* ViewController.swift in Sources */,
 				ACA27F5E231069E800365EDB /* AccountSelectorViewController.swift in Sources */,

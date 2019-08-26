@@ -33,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // xcrun simctl openurl booted rcbug://red?account=Account2
     // xcrun simctl openurl booted rcbug://red?account=Account1
 
+    // New bug
+    // xcrun simctl openurl booted rcbug://modal?account=Account2
+    // xcrun simctl openurl booted rcbug://modal?account=Account1
+
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
@@ -57,6 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                try? Navigation.router.navigate(to: Path.red, with: NavigationContext(account: account), animated: true, completion: nil)
 
             return true
+
+        case "modal":
+            try? Navigation.router.navigate(to: Path.modal, with: NavigationContext(account: account), animated: true, completion: nil)
+            return true
+
         default:
             return false
         }

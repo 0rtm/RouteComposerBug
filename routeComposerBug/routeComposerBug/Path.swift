@@ -9,16 +9,15 @@
 import Foundation
 import RouteComposer
 
-
 struct Path {
 
     static var accountSelector: DestinationStep<AccountSelectorViewController, NavigationContext?> {
         return StepAssembly(
             finder: ClassFinder<AccountSelectorViewController, NavigationContext?>(),
             factory: ClassFactory<AccountSelectorViewController, NavigationContext?>())
-            .using(UINavigationController.push())
+            .using(CATransaction.wrap(UINavigationController.push()))
             .from(NavigationControllerStep())
-            .using(GeneralAction.replaceRoot())
+            .using(CATransaction.wrap(GeneralAction.replaceRoot()))
             .from(GeneralStep.current())
             .assemble()
     }
@@ -27,7 +26,8 @@ struct Path {
         return StepAssembly(
             finder: ClassWithContextFinder<TabbarViewController, NavigationContext?>(),
             factory: TabBarFactory())
-            .using(UINavigationController.push())
+            .adding(ContextSettingTask())
+            .using(CATransaction.wrap(UINavigationController.push()))
             .from(accountSelector.expectingContainer())
             .assemble()
     }
@@ -48,5 +48,14 @@ struct Path {
             .from(Path.accountHome)
             .assemble()
     }
-    
+
+    static var modal: DestinationStep <ModalVCViewController, NavigationContext?> {
+        return StepAssembly(
+            finder: ClassWithContextFinder<ModalVCViewController, NavigationContext?>(),
+            factory:  ClassFactory<ModalVCViewController, NavigationContext?>())
+            .adding(ContextSettingTask())
+            .using(CATransaction.wrap(GeneralAction.presentModally()))
+            .from(Path.red)
+            .assemble()
+    }
 }
