@@ -18,6 +18,7 @@ class RedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = context?.account
+        providesPresentationContextTransitionStyle = true
     }
 }
 
