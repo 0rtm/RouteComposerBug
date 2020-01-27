@@ -28,14 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-
-    // Reproduce bug as follows:
-    // xcrun simctl openurl booted rcbug://red?account=Account2
-    // xcrun simctl openurl booted rcbug://red?account=Account1
-
-    // New bug
-    // xcrun simctl openurl booted rcbug://modal?account=Account2
-    // xcrun simctl openurl booted rcbug://modal?account=Account1
+    // modal presentation bug
+    // xcrun simctl openurl booted rcbug://overlay?account=Account2
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 
@@ -66,6 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             try? Navigation.router.navigate(to: Path.modal, with: NavigationContext(account: account), animated: true, completion: nil)
             return true
 
+        case "overlay":
+            try? Navigation.router.navigate(to: Path.overlay, with: NavigationContext(account: account), animated: true, completion: nil)
+                       return true
         default:
             return false
         }

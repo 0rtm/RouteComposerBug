@@ -13,6 +13,7 @@
 		AC1261312310686000089842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC12612F2310686000089842 /* Main.storyboard */; };
 		AC1261332310686100089842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1261322310686100089842 /* Assets.xcassets */; };
 		AC1261362310686100089842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1261342310686100089842 /* LaunchScreen.storyboard */; };
+		AC376DC123DF9500000E816A /* OverlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC376DC023DF9500000E816A /* OverlayVC.swift */; };
 		ACA27F5C231069E800365EDB /* AccountSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA27F55231069E700365EDB /* AccountSelectorViewController.xib */; };
 		ACA27F5D231069E800365EDB /* GreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACA27F56231069E700365EDB /* GreenViewController.xib */; };
 		ACA27F5E231069E800365EDB /* AccountSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F57231069E700365EDB /* AccountSelectorViewController.swift */; };
@@ -21,7 +22,6 @@
 		ACA27F61231069E800365EDB /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F5A231069E700365EDB /* GreenViewController.swift */; };
 		ACA27F62231069E800365EDB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F5B231069E700365EDB /* TabBarViewController.swift */; };
 		ACA27F6423106A8300365EDB /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6323106A8300365EDB /* Path.swift */; };
-		ACA27F6A23106A8C00365EDB /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6523106A8B00365EDB /* Path.swift */; };
 		ACA27F6B23106A8C00365EDB /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6623106A8C00365EDB /* NavigationContext.swift */; };
 		ACA27F6C23106A8C00365EDB /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6723106A8C00365EDB /* TabBarFactory.swift */; };
 		ACA27F6D23106A8C00365EDB /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA27F6823106A8C00365EDB /* Navigation.swift */; };
@@ -39,6 +39,7 @@
 		AC1261322310686100089842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1261352310686100089842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1261372310686100089842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC376DC023DF9500000E816A /* OverlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayVC.swift; sourceTree = "<group>"; };
 		ACA27F55231069E700365EDB /* AccountSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSelectorViewController.xib; sourceTree = "<group>"; };
 		ACA27F56231069E700365EDB /* GreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GreenViewController.xib; sourceTree = "<group>"; };
 		ACA27F57231069E700365EDB /* AccountSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSelectorViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		ACA27F5A231069E700365EDB /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		ACA27F5B231069E700365EDB /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		ACA27F6323106A8300365EDB /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		ACA27F6523106A8B00365EDB /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		ACA27F6623106A8C00365EDB /* NavigationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationContext.swift; sourceTree = "<group>"; };
 		ACA27F6723106A8C00365EDB /* TabBarFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
 		ACA27F6823106A8C00365EDB /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 				ACA27F6823106A8C00365EDB /* Navigation.swift */,
 				ACA27F6623106A8C00365EDB /* NavigationContext.swift */,
 				ACA27F6323106A8300365EDB /* Path.swift */,
-				ACA27F6523106A8B00365EDB /* Path.swift */,
 				ACA27F6723106A8C00365EDB /* TabBarFactory.swift */,
 				ACA27F6923106A8C00365EDB /* ViewController.swift */,
 				AC12612B2310686000089842 /* AppDelegate.swift */,
@@ -137,6 +136,7 @@
 				ACA27F58231069E700365EDB /* RedViewController.swift */,
 				ACA27F59231069E700365EDB /* RedViewController.xib */,
 				ACA27F5B231069E700365EDB /* TabBarViewController.swift */,
+				AC376DC023DF9500000E816A /* OverlayVC.swift */,
 			);
 			name = ViewControllers;
 			path = routeComposerBug/ViewControllers;
@@ -263,7 +263,6 @@
 			files = (
 				ACA27F5F231069E800365EDB /* RedViewController.swift in Sources */,
 				ACA27F6423106A8300365EDB /* Path.swift in Sources */,
-				ACA27F6A23106A8C00365EDB /* Path.swift in Sources */,
 				ACCF9C61231467E200CA7ECE /* ModalVCViewController.swift in Sources */,
 				ACA27F6D23106A8C00365EDB /* Navigation.swift in Sources */,
 				AC12612E2310686000089842 /* ViewController.swift in Sources */,
@@ -274,6 +273,7 @@
 				ACA27F61231069E800365EDB /* GreenViewController.swift in Sources */,
 				ACA27F6C23106A8C00365EDB /* TabBarFactory.swift in Sources */,
 				ACA27F6B23106A8C00365EDB /* NavigationContext.swift in Sources */,
+				AC376DC123DF9500000E816A /* OverlayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

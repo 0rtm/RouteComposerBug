@@ -58,4 +58,15 @@ struct Path {
             .from(Path.red)
             .assemble()
     }
+
+    static var overlay: DestinationStep <OverlayVC, NavigationContext?> {
+        return StepAssembly(
+            finder: ClassWithContextFinder<OverlayVC, NavigationContext?>(),
+            factory:  ClassFactory<OverlayVC, NavigationContext?>())
+            .adding(ContextSettingTask())
+            .using(GeneralAction.presentModally(presentationStyle: .overCurrentContext,
+                                                transitionStyle: .crossDissolve))
+            .from(Path.red)
+            .assemble()
+    }
 }
